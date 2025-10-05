@@ -12,7 +12,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-secondary-900 via-secondary-800 to-accent-purple">
+    <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-secondary-500 via-secondary-400 to-accent-purple">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Text Content */}
@@ -22,7 +22,7 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="space-y-8"
           >
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               <motion.h1 
                 className="text-6xl lg:text-8xl font-bold text-gradient"
                 initial={{ opacity: 0, y: 30 }}
@@ -39,10 +39,10 @@ const Hero = () => {
               >
                 Your day Secured
               </motion.p>
-            </div>
+            </div> */}
 
             <motion.h2 
-              className="text-3xl lg:text-5xl font-bold text-white leading-tight"
+              className="text-3xl lg:text-5xl font-bold text-primary-900 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -51,7 +51,7 @@ const Hero = () => {
             </motion.h2>
 
             <motion.p 
-              className="text-lg text-secondary-300 leading-relaxed"
+              className="text-lg text-primary-700 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
@@ -76,7 +76,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.p 
-              className="text-sm text-secondary-400 italic"
+              className="text-sm text-primary-600 italic"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.2, duration: 0.6 }}
@@ -94,14 +94,14 @@ const Hero = () => {
             style={{ transform: `translateY(${parallaxOffset}px)` }}
           >
             <motion.div 
-              className="bg-secondary-800/50 backdrop-blur-sm rounded-2xl p-8 max-w-md w-full border border-secondary-700"
+              className="bg-primary-800/50 backdrop-blur-sm rounded-2xl p-8 max-w-md w-full border border-primary-700"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               whileHover={{ scale: 1.02, rotateY: 5 }}
             >
               {/* Coming Soon Badge */}
               <motion.div 
-                className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500 text-white text-sm font-medium mb-6"
+                className="inline-flex items-center px-3 py-1 rounded-full bg-primary-500 text-secondary-500 text-sm font-medium mb-6"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 1.5, type: 'spring', stiffness: 200 }}
@@ -120,13 +120,13 @@ const Hero = () => {
                     transition={{ delay: 1.7 + index * 0.2, duration: 0.5 }}
                   >
                     <motion.div
-                      className={`p-2 rounded-lg bg-secondary-700 ${feature.color}`}
+                      className={`p-2 rounded-lg bg-primary-700 ${feature.color}`}
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ type: 'spring', stiffness: 300 }}
                     >
                       <feature.icon className="w-6 h-6" />
                     </motion.div>
-                    <span className="text-white font-medium">{feature.text}</span>
+                    <span className="text-secondary-500 font-medium">{feature.text}</span>
                   </motion.div>
                 ))}
               </div>

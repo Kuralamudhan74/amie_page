@@ -24,38 +24,40 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="section-padding bg-secondary-900">
-      <div className="container">
-        {/* Top Benefits Cards */}
+    <section id="products" className="section-padding bg-gradient-to-br from-secondary-500 via-secondary-400 to-accent-purple">
+      {/* Top Benefits Cards */}
+      <div className="container mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-6 mb-16"
+          className="grid md:grid-cols-3 gap-6"
         >
-          <div className="bg-secondary-800 rounded-xl p-6 text-center">
-            <h3 className="text-lg font-bold text-white mb-2">Everyday comfort</h3>
-            <p className="text-secondary-300 text-sm">sleek, discreet, and made for real life</p>
+          <div className="bg-primary-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-primary-700">
+            <h3 className="text-lg font-bold text-secondary-500 mb-2">Everyday comfort</h3>
+            <p className="text-secondary-400 text-sm">sleek, discreet, and made for real life</p>
           </div>
-          <div className="bg-secondary-800 rounded-xl p-6 text-center">
-            <h3 className="text-lg font-bold text-white mb-2">Future-focused</h3>
-            <p className="text-secondary-300 text-sm">protecting people and the planet</p>
+          <div className="bg-primary-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-primary-700">
+            <h3 className="text-lg font-bold text-secondary-500 mb-2">Future-focused</h3>
+            <p className="text-secondary-400 text-sm">protecting people and the planet</p>
           </div>
-          <div className="bg-secondary-800 rounded-xl p-6 text-center">
-            <h3 className="text-lg font-bold text-white mb-2">One solution for every flow</h3>
-            <p className="text-secondary-300 text-sm">adaptable protection for all needs</p>
+          <div className="bg-primary-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-primary-700">
+            <h3 className="text-lg font-bold text-secondary-500 mb-2">One solution for every flow</h3>
+            <p className="text-secondary-400 text-sm">adaptable protection for all needs</p>
           </div>
         </motion.div>
+      </div>
 
-        {/* Product Overview Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-accent-purple to-secondary-800 rounded-3xl p-8 lg:p-12"
-        >
+      {/* Product Overview Section - Full Width */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="w-full bg-gradient-to-br from-accent-purple to-primary-800 py-16 lg:py-24"
+      >
+        <div className="container">
           {/* Coming Soon Badge */}
           <motion.div
             initial={{ scale: 0 }}
@@ -64,7 +66,7 @@ const Products = () => {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-secondary-800 text-white text-sm font-medium">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-primary-800/50 backdrop-blur-sm text-secondary-500 text-sm font-medium border border-primary-700">
               Coming Soon
             </span>
           </motion.div>
@@ -75,7 +77,7 @@ const Products = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-3xl lg:text-5xl font-bold text-white text-center mb-8"
+            className="text-3xl lg:text-5xl font-bold text-secondary-500 text-center mb-8"
           >
             Product Overview
           </motion.h2>
@@ -86,7 +88,7 @@ const Products = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-lg text-secondary-300 text-center mb-12 max-w-3xl mx-auto"
+            className="text-lg text-secondary-400 text-center mb-12 max-w-3xl mx-auto"
           >
             We're working on something transformative. Get ready for the next generation of 
             leakproof, sustainable comfort.
@@ -101,10 +103,10 @@ const Products = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-secondary-800 rounded-2xl p-8 text-center card-hover"
+                className="bg-primary-800/50 backdrop-blur-sm rounded-2xl p-8 text-center card-hover border border-primary-700"
               >
                 <motion.div
-                  className={`inline-flex p-4 rounded-2xl bg-secondary-700 mb-6 ${product.color}`}
+                  className={`inline-flex p-4 rounded-2xl bg-primary-700/50 backdrop-blur-sm mb-6 ${product.color}`}
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   animate={{ y: -5 }}
                   transition={{ 
@@ -117,18 +119,18 @@ const Products = () => {
                   <product.icon className="w-8 h-8" />
                 </motion.div>
                 
-                <h3 className="text-xl font-bold text-white mb-4">
+                <h3 className="text-xl font-bold text-secondary-500 mb-4">
                   {product.title}
                 </h3>
                 
-                <p className="text-secondary-300 leading-relaxed">
+                <p className="text-secondary-400 leading-relaxed">
                   {product.description}
                 </p>
               </motion.div>
             ))}
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 };

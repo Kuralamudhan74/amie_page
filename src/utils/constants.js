@@ -41,17 +41,17 @@ export const staggerItem = {
 export const colorSchemes = {
   primary: {
     bg: 'bg-primary-500',
-    text: 'text-secondary-900',
+    text: 'text-secondary-500',
     accent: 'text-primary-600'
   },
-  dark: {
-    bg: 'bg-secondary-900',
-    text: 'text-white',
-    accent: 'text-primary-400'
+  light: {
+    bg: 'bg-secondary-500',
+    text: 'text-primary-900',
+    accent: 'text-primary-600'
   },
   purple: {
     bg: 'bg-accent-purple',
-    text: 'text-white',
+    text: 'text-secondary-500',
     accent: 'text-primary-400'
   }
 };

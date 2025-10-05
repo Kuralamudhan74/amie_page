@@ -42,7 +42,7 @@ const Benefits = () => {
   ];
 
   return (
-    <section id="benefits" className="section-padding bg-secondary-900">
+    <section id="benefits" className="section-padding bg-primary-500">
       <div className="container">
         {/* Section Title */}
         <motion.div
@@ -52,7 +52,7 @@ const Benefits = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-8">
+          <h2 className="text-4xl lg:text-6xl font-bold text-secondary-500 mb-8">
             Why Choose AMIE?
           </h2>
         </motion.div>
@@ -66,10 +66,10 @@ const Benefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-secondary-800 rounded-2xl p-8 text-center card-hover"
+              className="bg-primary-800 rounded-2xl p-8 text-center card-hover"
             >
               <motion.div
-                className={`inline-flex p-4 rounded-2xl bg-secondary-700 mb-6 ${feature.color}`}
+                className={`inline-flex p-4 rounded-2xl bg-primary-700 mb-6 ${feature.color}`}
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 animate={{ y: -5 }}
                 transition={{ 
@@ -82,11 +82,11 @@ const Benefits = () => {
                 <feature.icon className="w-8 h-8" />
               </motion.div>
               
-              <h3 className="text-xl font-bold text-white mb-4">
+              <h3 className="text-xl font-bold text-secondary-500 mb-4">
                 {feature.title}
               </h3>
               
-              <p className="text-secondary-300 leading-relaxed">
+              <p className="text-secondary-400 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

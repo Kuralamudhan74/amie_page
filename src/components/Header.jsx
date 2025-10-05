@@ -16,7 +16,7 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="fixed top-0 left-0 right-0 z-50 bg-secondary-900/95 backdrop-blur-sm border-b border-secondary-800"
+      className="fixed top-0 left-0 right-0 z-50 bg-secondary-500/95 backdrop-blur-sm border-b border-secondary-400"
     >
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -29,7 +29,7 @@ const Header = () => {
             <h1 className="text-2xl lg:text-3xl font-bold text-gradient">
               AMIE
             </h1>
-            <p className="text-sm text-secondary-400 -mt-1">
+            <p className="text-sm text-primary-600 -mt-1">
               Your day Secured
             </p>
           </motion.div>
@@ -40,7 +40,7 @@ const Header = () => {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="text-secondary-300 hover:text-primary-400 transition-colors duration-300 font-medium"
+                className="text-primary-700 hover:text-primary-500 transition-colors duration-300 font-medium"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
@@ -53,7 +53,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden p-2 text-secondary-300 hover:text-primary-400"
+            className="md:hidden p-2 text-primary-700 hover:text-primary-500"
             whileTap={{ scale: 0.95 }}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -23,7 +23,7 @@ const Waitlist = () => {
   };
 
   return (
-    <section id="waitlist" className="section-padding bg-primary-500">
+    <section id="waitlist" className="section-padding bg-secondary-500">
       <div className="container">
         <div className="max-w-4xl mx-auto">
           {/* Section Title */}
@@ -34,10 +34,10 @@ const Waitlist = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl lg:text-6xl font-bold text-secondary-900 mb-6">
+            <h2 className="text-4xl lg:text-6xl font-bold text-primary-900 mb-6">
               Stay in the loop
             </h2>
-            <p className="text-lg text-secondary-700 max-w-2xl mx-auto">
+            <p className="text-lg text-primary-700 max-w-2xl mx-auto">
               Be the first to know when we launch — and unlock exclusive early bird offers
             </p>
           </motion.div>
@@ -66,7 +66,7 @@ const Waitlist = () => {
                   placeholder="Full Name"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-secondary-900 placeholder-secondary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
+                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 placeholder-primary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
                   required
                 />
               </motion.div>
@@ -82,7 +82,7 @@ const Waitlist = () => {
                   name="category"
                   value={formData.category}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-secondary-900 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 appearance-none cursor-pointer"
+                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 appearance-none cursor-pointer"
                   required
                 >
                   <option value="" disabled>Select Category</option>
@@ -107,7 +107,7 @@ const Waitlist = () => {
                   placeholder="Email Address"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-secondary-900 placeholder-secondary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
+                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 placeholder-primary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
                   required
                 />
               </motion.div>
@@ -125,7 +125,7 @@ const Waitlist = () => {
                   placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-secondary-900 placeholder-secondary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
+                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 placeholder-primary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
                 />
               </motion.div>
             </div>
@@ -140,7 +140,7 @@ const Waitlist = () => {
             >
               <motion.button
                 type="submit"
-                className="bg-gradient-to-r from-primary-600 to-primary-700 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:from-primary-700 hover:to-primary-800 hover:scale-105 hover:shadow-lg"
+                className="bg-gradient-to-r from-primary-600 to-primary-700 text-secondary-500 px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:from-primary-700 hover:to-primary-800 hover:scale-105 hover:shadow-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -154,7 +154,7 @@ const Waitlist = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.8 }}
               viewport={{ once: true }}
-              className="text-center text-sm text-secondary-600"
+              className="text-center text-sm text-primary-600"
             >
               We respect your privacy. Unsubscribe at any time.
             </motion.p>
