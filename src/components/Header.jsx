@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { cn } from '../utils';
+import amieLogo from '../assets/Amie Logo - Colour.jpg';
 
 const Header = () => {
   const NAVIGATION_ITEMS = [
@@ -27,9 +28,13 @@ const Header = () => {
             transition={{ type: 'spring', stiffness: 300 }}
           >
             <h1 className="text-2xl lg:text-3xl font-bold text-gradient">
-              AMIE
+            <img 
+              src={amieLogo} 
+              alt="AMIE Logo" 
+              className="h-14 lg:h-30 object-contain inline-block" 
+            />
             </h1>
-            <p className="text-sm text-primary-600 -mt-1">
+            <p className="text-sm text-primary-600 -mt-1 inline-block">
               Your day Secured
             </p>
           </motion.div>

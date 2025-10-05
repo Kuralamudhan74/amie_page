@@ -140,7 +140,7 @@ const Waitlist = () => {
             >
               <motion.button
                 type="submit"
-                className="bg-gradient-to-r from-primary-600 to-primary-700 text-secondary-500 px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:from-primary-700 hover:to-primary-800 hover:scale-105 hover:shadow-lg"
+                className="bg-gradient-to-r from-primary-500 to-accent-purple text-white px-12 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:from-accent-purple hover:to-primary-600 hover:scale-105 hover:shadow-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

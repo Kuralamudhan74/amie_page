@@ -20,35 +20,44 @@ export default {
           800: '#1d0b1e',
           900: '#150716',
         },
+        // Base Colors - Pure Off White Background
         secondary: {
-          50: '#fffcec',
-          100: '#fff8d9',
-          200: '#fff0b3',
-          300: '#ffe88d',
-          400: '#ffe066',
-          500: '#fffcec', // Main cream
-          600: '#e6e3d4',
-          700: '#cccaa1',
-          800: '#b3b06e',
-          900: '#99963b',
+          50: '#FFFCFC', // Pure off white - main background
+          100: '#faf8f8',
+          200: '#f5f2f2',
+          300: '#f0ecec',
+          400: '#ebe6e6',
+          500: '#FFFCFC', // Main pure off white
+          600: '#e6e0e0',
+          700: '#d9d1d1',
+          800: '#ccc2c2',
+          900: '#bfb3b3',
         },
+        // Highlight Colors
+        highlight: {
+          pink: '#F078CF', // Persian Pink - buttons, CTAs, icons
+          orange: '#E9562F', // Flamingo Orange - section titles, promotions
+          yellow: '#FFB116', // Tangerine Yellow - hover effects, accents
+        },
+        // Accent Colors
         accent: {
-          purple: '#2d132e',
+          red: '#D03714', // Vermilion Red - alerts, special offers, key features
+          purple: '#35173B', // Enhanced dark purple for better contrast
           dark: '#150716',
-          gray: '#cccaa1',
-          light: '#fff8d9',
+          gray: '#d9d1d1', // Subtle gray that works with off-white
+          light: '#faf8f8', // Light accent that complements off-white
         },
         // Purple color palette for About section
         purple: {
-          'light-bg': '#fffcec', // Very light cream background
+          'light-bg': '#FFFCFC', // Pure off white background
           'dark-text': '#150716', // Dark purple for titles
-          'medium-text': '#351736', // Medium purple for paragraphs
+          'medium-text': '#35173B', // Enhanced medium purple for paragraphs
           'card-bg': '#ffffff', // White for cards
         },
         // About section gradient colors
         about: {
-          'gradient-start': '#fffcec', // Light cream
-          'gradient-end': '#fff8d9', // Slightly darker cream
+          'gradient-start': '#FFFCFC', // Pure off white
+          'gradient-end': '#faf8f8', // Subtle variation of off white
         }
       },
       fontFamily: {

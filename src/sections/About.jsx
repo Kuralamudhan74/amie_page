@@ -52,8 +52,8 @@ const About = () => {
               className="bg-secondary-400/80 backdrop-blur-sm rounded-3xl p-8 border border-secondary-300"
             >
               <div className="flex items-center mb-6">
-                <div className="p-3 rounded-full bg-yellow-500/20 mr-4">
-                  <AlertTriangle className="w-8 h-8 text-yellow-600" />
+                <div className="p-3 rounded-full bg-accent-red/20 mr-4">
+                  <AlertTriangle className="w-8 h-8 text-accent-red" />
                 </div>
                 <h4 className="text-2xl font-bold text-primary-900">The Problem</h4>
               </div>

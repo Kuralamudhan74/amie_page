@@ -19,7 +19,7 @@ const Benefits = () => {
       icon: Shield,
       title: 'Leakproof innovation',
       description: 'advanced absorbency you can trust',
-      color: 'text-red-400'
+      color: 'text-primary-600'
     },
     {
       icon: Cloud,
@@ -31,7 +31,7 @@ const Benefits = () => {
       icon: Sparkles,
       title: 'Future-focused',
       description: 'protecting people and the planet',
-      color: 'text-purple-400'
+      color: 'text-primary-500'
     },
     {
       icon: Waves,

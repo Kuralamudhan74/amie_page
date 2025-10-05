@@ -8,7 +8,7 @@ const Hero = () => {
   const features = [
     { icon: Droplets, text: 'High Absorbency', color: 'text-blue-400' },
     { icon: Leaf, text: 'Sustainable', color: 'text-green-400' },
-    { icon: Shield, text: 'Leakproof', color: 'text-yellow-400' }
+    { icon: Shield, text: 'Leakproof', color: 'text-primary-600' }
   ];
 
   return (
