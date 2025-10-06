@@ -55,7 +55,7 @@ const Products = () => {
     <section id="products" className="section-padding bg-gradient-to-br from-secondary-500 via-secondary-400 to-accent-purple">
       {/* Top Benefits Cards */}
    
-      {/* Interactive Statistics Section */}
+      {/* Interactive Statistics Section
       <div className="container mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -104,7 +104,7 @@ const Products = () => {
         </div>
       </div>
 
-      {/* Customer Testimonials */}
+      {/* Customer Testimonials 
       <div className="container mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -155,7 +155,7 @@ const Products = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Technology Showcase */}
       <div className="container mb-16">
@@ -195,7 +195,7 @@ const Products = () => {
               <div className="bg-white/80 rounded-2xl p-6 border border-secondary-300">
                 <Clock className="w-12 h-12 text-primary-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-primary-900 mb-2">Instant Absorption</h3>
-                <p className="text-primary-700">Advanced micro-fiber technology absorbs 3x faster than traditional materials</p>
+                {/* <p className="text-primary-700">Advanced micro-fiber technology absorbs 3x faster than traditional materials</p> */}
               </div>
             </motion.div>
 
@@ -209,7 +209,7 @@ const Products = () => {
               <div className="bg-white/80 rounded-2xl p-6 border border-secondary-300">
                 <Shield className="w-12 h-12 text-primary-500 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-primary-900 mb-2">Leakproof Design</h3>
-                <p className="text-primary-700">Multi-layer protection system ensures confidence in any situation</p>
+                {/* <p className="text-primary-700">Multi-layer protection system ensures confidence in any situation</p> */}
               </div>
             </motion.div>
 
@@ -223,7 +223,7 @@ const Products = () => {
               <div className="bg-white/80 rounded-2xl p-6 border border-secondary-300">
                 <TrendingUp className="w-12 h-12 text-primary-700 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-primary-900 mb-2">Sustainable Future</h3>
-                <p className="text-primary-700">Biodegradable materials that break down naturally without harming the environment</p>
+                {/* <p className="text-primary-700">Biodegradable materials that break down naturally without harming the environment</p> */}
               </div>
             </motion.div>
           </div>

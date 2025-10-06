@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
-import { Camera, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Twitter, Linkedin } from 'lucide-react';
+import amieLogo from '../assets/Amie Logo - Off White Colour.png';
+// import  Instagram  from '../assets/instagram.png';
+
 
 const Footer = () => {
   const socialLinks = [
-    { name: 'Instagram', icon: Camera, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/amie_yourdaysecured?igsh=MW02dTdjbGVvYTNtcw==' }
   ];
 
   return (
@@ -21,14 +22,19 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <div className="flex flex-col">
+             <div className="flex flex-col items-center justify-center text-center">
                 <h3 className="text-2xl font-bold text-gradient mb-2">
-                  AMIE
+                  <img 
+                    src={amieLogo} 
+                    alt="AMIE Logo" 
+                    className="h-14 lg:h-30 object-contain" 
+                  />
                 </h3>
                 <p className="text-secondary-400 text-sm">
                   Your day Secured
                 </p>
               </div>
+
             </motion.div>
 
             {/* Social Media */}
@@ -39,12 +45,17 @@ const Footer = () => {
               viewport={{ once: true }}
               className="text-center md:text-left"
             >
-              <h4 className="text-secondary-500 font-semibold mb-4">Follow Our Journey</h4>
-              <div className="flex justify-center md:justify-start space-x-4">
+                        <h4 className="text-secondary-500 font-semibold mb-4">
+                Follow Our Journey
+              </h4>
+
+              <div className="flex space-x-4 pl-10">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferer"
                     className="w-10 h-10 rounded-full bg-primary-800 flex items-center justify-center text-secondary-400 hover:text-secondary-500 hover:bg-primary-700 transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
@@ -70,10 +81,10 @@ const Footer = () => {
               <h4 className="text-secondary-500 font-semibold mb-4">Contact</h4>
               <div className="space-y-2">
                 <p className="text-secondary-400 text-sm">
-                  hello@amie.com
+                  premalatha@novcor.in
                 </p>
                 <p className="text-secondary-500 text-sm">
-                  Coming Soon
+                  +91 8667494710
                 </p>
               </div>
             </motion.div>

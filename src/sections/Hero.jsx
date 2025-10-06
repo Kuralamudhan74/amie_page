@@ -1,14 +1,15 @@
 import { motion } from 'framer-motion';
 import { Droplets, Leaf, Shield } from 'lucide-react';
 import { useParallax } from '../hooks/useAnimations';
+// import water_sheild from '../assets/shield.png';
 
 const Hero = () => {
   const parallaxOffset = useParallax(0.3);
   
   const features = [
     { icon: Droplets, text: 'High Absorbency', color: 'text-blue-400' },
-    { icon: Leaf, text: 'Sustainable', color: 'text-green-400' },
-    { icon: Shield, text: 'Leakproof', color: 'text-primary-600' }
+    { icon: Shield, text: 'Leakproof', color: 'text-blue-600' },
+    { icon: Leaf, text: 'Sustainable', color: 'text-green-400' }
   ];
 
   return (
@@ -56,8 +57,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              One technology. Infinite possibilities. Designed to support you confidently, 
-              sustainably, and with dignity—at every stage of life.
+              One technology. Infinite possibilities.<br /> Designed to support you confidently, 
+              sustainably, and with dignity — at every stage of life.
             </motion.p>
 
             <motion.div 
@@ -110,26 +111,31 @@ const Hero = () => {
               </motion.div>
 
               {/* Features List */}
-              <div className="space-y-6">
-                {features.map((feature, index) => (
-                  <motion.div 
-                    key={feature.text}
-                    className="flex items-center space-x-4"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 1.7 + index * 0.2, duration: 0.5 }}
+            <div className="space-y-6">
+              {features.map((feature, index) => (
+                <motion.div 
+                  key={feature.text}
+                  className="flex items-center space-x-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.7 + index * 0.2, duration: 0.5 }}
+                >
+                  <motion.div
+                    className={`p-2 rounded-lg bg-primary-700 ${feature.color}`}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
                   >
-                    <motion.div
-                      className={`p-2 rounded-lg bg-primary-700 ${feature.color}`}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ type: 'spring', stiffness: 300 }}
-                    >
+                    {feature.icon.name === 'Shield' ? (
+                      <feature.icon className="w-6 h-6 text-blue-500" strokeWidth={2.5} />
+                    ) : (
                       <feature.icon className="w-6 h-6" />
-                    </motion.div>
-                    <span className="text-secondary-500 font-medium">{feature.text}</span>
+                    )}
                   </motion.div>
-                ))}
-              </div>
+                  <span className="text-secondary-500 font-medium">{feature.text}</span>
+                </motion.div>
+              ))}
+            </div>
+
             </motion.div>
           </motion.div>
         </div>

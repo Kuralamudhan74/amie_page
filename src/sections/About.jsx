@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { AlertTriangle, FlaskConical } from 'lucide-react';
+import { CheckCircle, XCircle , Lightbulb } from 'lucide-react';
 
 const About = () => {
   return (
@@ -18,8 +19,8 @@ const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto space-y-6 text-lg text-primary-700 leading-relaxed">
             <p>
-              At AMIE, we believe life's little leaks shouldn't get in the way of living fully. 
-              From infancy to adulthood, leaks are a universal part of the human journey—yet managing 
+              At AMIE, we believe life's little <q><b><i>leaks</i></b></q> shouldn't get in the way of living fully. 
+              From infancy to adulthood, <q><b><i>leaks</i></b></q> are a universal part of the human journey—yet managing 
               them doesn't need to come at the cost of comfort, confidence, or the planet.
             </p>
             <p>
@@ -53,9 +54,8 @@ const About = () => {
             >
               <div className="flex items-center mb-6">
                 <div className="p-3 rounded-full bg-accent-red/20 mr-4">
-                  <AlertTriangle className="w-8 h-8 text-accent-red" />
+                  <XCircle  className="w-8 h-8 text-accent-red" />
                 </div>
-                <h4 className="text-2xl font-bold text-primary-900">The Problem</h4>
               </div>
               <p className="text-primary-700 leading-relaxed">
                 Traditional disposable products create massive environmental waste, taking 
@@ -75,9 +75,8 @@ const About = () => {
             >
               <div className="flex items-center mb-6">
                 <div className="p-3 rounded-full bg-primary-500/20 mr-4">
-                  <FlaskConical className="w-8 h-8 text-primary-600" />
+                  <Lightbulb className="w-8 h-8 text-primary-600" />
                 </div>
-                <h4 className="text-2xl font-bold text-primary-900">Our Solution</h4>
               </div>
               <p className="text-primary-700 leading-relaxed">
                 AMIE combines cutting-edge science with sustainable design, delivering superior 

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { cn } from '../utils';
-import amieLogo from '../assets/Amie Logo - Colour.jpg';
+import amieLogo from '../assets/Amie Logo - Colour.png';
 
 const Header = () => {
   const NAVIGATION_ITEMS = [
@@ -27,16 +27,19 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 300 }}
           >
-            <h1 className="text-2xl lg:text-3xl font-bold text-gradient">
-            <img 
-              src={amieLogo} 
-              alt="AMIE Logo" 
-              className="h-14 lg:h-30 object-contain inline-block" 
-            />
-            </h1>
-            <p className="text-sm text-primary-600 -mt-1 inline-block">
-              Your day Secured
-            </p>
+            <div className="flex flex-col items-center justify-center text-center">
+              <h1 className="text-2xl lg:text-3xl font-bold text-gradient">
+                <img 
+                  src={amieLogo} 
+                  alt="AMIE Logo" 
+                  className="h-14 lg:h-30 object-contain inline-block" 
+                />
+              </h1>
+              <p className="text-sm text-primary-600 -mt-1">
+                Your day Secured
+              </p>
+          </div>
+
           </motion.div>
 
           {/* Navigation */}

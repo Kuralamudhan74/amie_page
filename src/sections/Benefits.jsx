@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Droplets, Leaf, Shield, Cloud, Sparkles, Waves } from 'lucide-react';
+import { Droplets, Leaf, Shield, Feather, TrendingUp, Infinity } from 'lucide-react';
 
 const Benefits = () => {
   const features = [
@@ -19,22 +19,22 @@ const Benefits = () => {
       icon: Shield,
       title: 'Leakproof innovation',
       description: 'advanced absorbency you can trust',
-      color: 'text-primary-600'
+      color: 'text-blue-600'
     },
     {
-      icon: Cloud,
+      icon: Feather,
       title: 'Everyday comfort',
       description: 'sleek, discreet, and made for real life',
       color: 'text-gray-300'
     },
     {
-      icon: Sparkles,
+      icon: TrendingUp,
       title: 'Future-focused',
       description: 'protecting people and the planet',
-      color: 'text-primary-500'
+      color: 'text-blue-500'
     },
     {
-      icon: Waves,
+      icon: Infinity,
       title: 'One solution for every flow',
       description: 'adaptable protection for all needs',
       color: 'text-blue-400'
