@@ -33,8 +33,8 @@ const Products = () => {
   const stats = [
     { icon: Award, number: '4x', label: 'Faster Absorption', color: 'text-primary-700' },
     { icon: Users, number: '200+', label: 'Early Adopters', color: 'text-primary-600' },
-    { icon: Calendar, number: '3 Yrs', label: 'of R&D', color: 'text-primary-500' },
-    { icon: Zap, number: '5', label: 'rounds of Piloting', color: 'text-primary-500' }
+    { icon: Calendar, number: '3 Yrs', label: 'of Research and Development', color: 'text-primary-500' },
+    { icon: Zap, number: '5+', label: 'rounds of Piloting', color: 'text-primary-500' }
   ];
 
   const testimonials = [
@@ -72,7 +72,7 @@ const Products = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 mb-4">
-            Trusted by Thousands
+            Why Trust AMIE?
           </h2>
           <p className="text-lg text-primary-700 max-w-2xl mx-auto">
             See why people are choosing AMIE for their protection needs

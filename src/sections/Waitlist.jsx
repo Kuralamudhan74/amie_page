@@ -61,16 +61,19 @@ const Waitlist = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 viewport={{ once: true }}
+                className="relative"
               >
                 <input
                   type="text"
                   name="fullName"
-                  placeholder="Full Name"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 placeholder-primary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
+                  className="w-full px-6 pt-6 pb-2 rounded-lg bg-white text-primary-900 border-2 border-gray-200 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 peer"
                   required
                 />
+                <label className="absolute left-6 top-2 text-primary-500 text-sm transition-all duration-300 peer-focus:text-primary-300 peer-focus:text-xs peer-focus:-translate-y-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-500 peer-placeholder-shown:translate-y-0">
+                  Full Name
+                </label>
               </motion.div>
 
               {/* Category Dropdown */}
@@ -79,21 +82,25 @@ const Waitlist = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
+                className="relative"
               >
                 <select
                   name="category"
                   value={formData.category}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 appearance-none cursor-pointer"
+                  className="w-full px-6 pt-6 pb-2 rounded-lg bg-white text-primary-900 border-2 border-gray-200 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 appearance-none cursor-pointer peer"
                   required
                 >
-                  <option value="" disabled>Select Category</option>
+                  <option value="" disabled> </option>
                   <option value="baby_diapers">Baby Diapers</option>
                   <option value="women incontinence ">Women Incontinence </option>
                   <option value="period wear">Period Wear</option>
                   <option value="adult_diapers">Adult Diapers</option>
                   <option value="other">Other</option>
                 </select>
+                <label className="absolute left-6 top-2 text-primary-500 text-sm transition-all duration-300 peer-focus:text-primary-300 peer-focus:text-xs peer-focus:-translate-y-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-500 peer-placeholder-shown:translate-y-0">
+                  Select Category
+                </label>
               </motion.div>
 
               {/* Email */}
@@ -102,16 +109,19 @@ const Waitlist = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
+                className="relative"
               >
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email Address"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 placeholder-primary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
+                  className="w-full px-6 pt-6 pb-2 rounded-lg bg-white text-primary-900 border-2 border-gray-200 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 peer"
                   required
                 />
+                <label className="absolute left-6 top-2 text-primary-500 text-sm transition-all duration-300 peer-focus:text-primary-300 peer-focus:text-xs peer-focus:-translate-y-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-500 peer-placeholder-shown:translate-y-0">
+                  Email Address
+                </label>
               </motion.div>
 
               {/* Age */}
@@ -120,16 +130,19 @@ const Waitlist = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
+                className="relative"
               >
                 <input
                   type="text"
                   name="age"
-                  placeholder="Age"
                   value={formData.age}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 placeholder-primary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
+                  className="w-full px-6 pt-6 pb-2 rounded-lg bg-white text-primary-900 border-2 border-gray-200 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 peer"
                   required
                 />
+                <label className="absolute left-6 top-2 text-primary-500 text-sm transition-all duration-300 peer-focus:text-primary-300 peer-focus:text-xs peer-focus:-translate-y-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-500 peer-placeholder-shown:translate-y-0">
+                  Age
+                </label>
               </motion.div>
 
              {/* Gender Dropdown */}
@@ -138,19 +151,23 @@ const Waitlist = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
+                className="relative"
               >
                 <select
                   name="gender"
                   value={formData.gender}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 appearance-none cursor-pointer"
+                  className="w-full px-6 pt-6 pb-2 rounded-lg bg-white text-primary-900 border-2 border-gray-200 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 appearance-none cursor-pointer peer"
                   required
                 >
-                  <option value="" disabled>Select Gender</option>
+                  <option value="" disabled> </option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                   <option value="not_to_say">Not to say</option>
                 </select>
+                <label className="absolute left-6 top-2 text-primary-500 text-sm transition-all duration-300 peer-focus:text-primary-300 peer-focus:text-xs peer-focus:-translate-y-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-500 peer-placeholder-shown:translate-y-0">
+                  Select Gender
+                </label>
               </motion.div>
 
               {/* Phone */}
@@ -159,15 +176,18 @@ const Waitlist = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
                 viewport={{ once: true }}
+                className="relative"
               >
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 placeholder-primary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
+                  className="w-full px-6 pt-6 pb-2 rounded-lg bg-white text-primary-900 border-2 border-gray-200 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 peer"
                 />
+                <label className="absolute left-6 top-2 text-primary-500 text-sm transition-all duration-300 peer-focus:text-primary-300 peer-focus:text-xs peer-focus:-translate-y-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-500 peer-placeholder-shown:translate-y-0">
+                  Phone Number
+                </label>
               </motion.div>
             </div>
 
