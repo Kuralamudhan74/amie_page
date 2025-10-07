@@ -13,7 +13,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-secondary-500 via-secondary-400 to-accent-purple">
+    <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-secondary-500 via-secondary-400 to-accent-purple pt-16 lg:pt-20">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Text Content */}
