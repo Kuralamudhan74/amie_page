@@ -8,7 +8,7 @@ const Header = () => {
     { name: 'About', href: '#about' },
     { name: 'Science', href: '#science' },
     { name: 'Benefits', href: '#benefits' },
-    { name: 'Products', href: '#products' },
+    { name: 'Products', href: '#product-overview' },
     { name: 'Waitlist', href: '#waitlist' },
   ];
 
@@ -36,7 +36,7 @@ const Header = () => {
                 />
               </h1>
               <p className="text-sm text-primary-600 -mt-1">
-                Your day Secured
+                Your day, Secured
               </p>
           </div>
 

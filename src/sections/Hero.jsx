@@ -58,7 +58,7 @@ const Hero = () => {
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               One technology. Infinite possibilities.<br /> Designed to support you confidently, 
-              sustainably, and with dignity — at every stage of life.
+              sustainably, and with dignity at every stage of life.
             </motion.p>
 
             <motion.div 

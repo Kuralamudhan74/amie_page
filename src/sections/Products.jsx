@@ -1,33 +1,40 @@
 import { motion } from 'framer-motion';
 import { Baby, Shirt, Heart, Users, Leaf, Zap, Award, TrendingUp, Clock, Shield } from 'lucide-react';
+import {Calendar} from 'lucide-react';
+import adult_diaper from '../assets/diaper.png';
+import period_panties from '../assets/knickers.png';
+import baby_image from '../assets/baby.png';
 
 const Products = () => {
   const products = [
     {
-      icon: Baby,
+      icon: baby_image,
       title: 'Baby diapers',
       description: 'Gentle, reusable protection for your little one\'s delicate skin',
-      color: 'text-primary-600'
+      color: 'text-white',
+      isImage: true
     },
     {
-      icon: Shirt,
+      icon: adult_diaper,
       title: 'Adult incontinence wearables',
       description: 'Discreet, comfortable solutions for active adult lifestyles',
-      color: 'text-blue-400'
+      color: 'text-white-400',
+      isImage: true
     },
     {
-      icon: Heart,
+      icon: period_panties,
       title: 'Teen and women period panties',
       description: 'Stylish, leak-proof underwear for confident period management',
-      color: 'text-pink-400'
+      color: 'text-pink-400',
+      isImage: true
     }
   ];
 
   const stats = [
-    { icon: Users, number: '10K+', label: 'Early Adopters', color: 'text-primary-600' },
-    { icon: Leaf, number: '95%', label: 'Waste Reduction', color: 'text-green-500' },
-    { icon: Zap, number: '3x', label: 'Faster Absorption', color: 'text-primary-500' },
-    { icon: Award, number: '24/7', label: 'Comfort Guarantee', color: 'text-primary-700' }
+    { icon: Award, number: '4x', label: 'Faster Absorption', color: 'text-primary-700' },
+    { icon: Users, number: '200+', label: 'Early Adopters', color: 'text-primary-600' },
+    { icon: Calendar, number: '3 Yrs', label: 'of R&D', color: 'text-primary-500' },
+    { icon: Zap, number: '5', label: 'rounds of Piloting', color: 'text-primary-500' }
   ];
 
   const testimonials = [
@@ -55,7 +62,7 @@ const Products = () => {
     <section id="products" className="section-padding bg-gradient-to-br from-secondary-500 via-secondary-400 to-accent-purple">
       {/* Top Benefits Cards */}
    
-      {/* Interactive Statistics Section
+      {/*Interactive Statistics Section*/}
       <div className="container mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -104,7 +111,7 @@ const Products = () => {
         </div>
       </div>
 
-      {/* Customer Testimonials 
+      {/* Customer Testimonials */}
       <div className="container mb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -155,7 +162,7 @@ const Products = () => {
             </motion.div>
           ))}
         </div>
-      </div> */}
+      </div>
 
       {/* Technology Showcase */}
       <div className="container mb-16">
@@ -232,6 +239,7 @@ const Products = () => {
 
       {/* Product Overview Section - Full Width */}
       <motion.div
+        id="product-overview"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -297,7 +305,11 @@ const Products = () => {
                     repeatType: 'reverse'
                   }}
                 >
-                  <product.icon className="w-8 h-8" />
+                  {product.isImage ? (
+                    <img src={product.icon} alt={product.title} className="w-10 h-10 object-contain" />
+                  ) : (
+                    <product.icon className="w-8 h-8" />
+                  )}
                 </motion.div>
                 
                 <h3 className="text-xl font-bold text-secondary-500 mb-4">

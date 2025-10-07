@@ -6,7 +6,9 @@ const Waitlist = () => {
     fullName: '',
     email: '',
     phone: '',
-    category: ''
+    category: '',
+    age: '',
+    gender: ''
   });
 
   const handleInputChange = (e) => {
@@ -86,10 +88,10 @@ const Waitlist = () => {
                   required
                 >
                   <option value="" disabled>Select Category</option>
-                  <option value="parent">Parent</option>
-                  <option value="adult">Adult</option>
-                  <option value="teen">Teen</option>
-                  <option value="caregiver">Caregiver</option>
+                  <option value="baby_diapers">Baby Diapers</option>
+                  <option value="women incontinence ">Women Incontinence </option>
+                  <option value="period wear">Period Wear</option>
+                  <option value="adult_diapers">Adult Diapers</option>
                   <option value="other">Other</option>
                 </select>
               </motion.div>
@@ -110,6 +112,45 @@ const Waitlist = () => {
                   className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 placeholder-primary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
                   required
                 />
+              </motion.div>
+
+              {/* Age */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <input
+                  type="text"
+                  name="age"
+                  placeholder="Age"
+                  value={formData.age}
+                  onChange={handleInputChange}
+                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 placeholder-primary-500 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300"
+                  required
+                />
+              </motion.div>
+
+             {/* Gender Dropdown */}
+             <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
+                <select
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleInputChange}
+                  className="w-full px-6 py-4 rounded-lg bg-white text-primary-900 border-0 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 appearance-none cursor-pointer"
+                  required
+                >
+                  <option value="" disabled>Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="not_to_say">Not to say</option>
+                </select>
               </motion.div>
 
               {/* Phone */}

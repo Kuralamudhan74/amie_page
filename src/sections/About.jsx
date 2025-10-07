@@ -33,6 +33,7 @@ const About = () => {
 
         {/* The Science Section */}
         <motion.div
+          id="science"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -53,15 +54,15 @@ const About = () => {
               className="bg-secondary-400/80 backdrop-blur-sm rounded-3xl p-8 border border-secondary-300"
             >
               <div className="flex items-center mb-6">
-                <div className="p-3 rounded-full bg-accent-red/20 mr-4">
-                  <XCircle  className="w-8 h-8 text-accent-red" />
+                <div className="p-3 rounded-lg bg-yellow-500/20 mr-4">
+                  <XCircle className="w-8 h-8 text-yellow-400" />
                 </div>
+                <h4 className="text-2xl font-bold text-purple">The Problem</h4>
               </div>
               <p className="text-primary-700 leading-relaxed">
                 Traditional disposable products create massive environmental waste, taking 
                 centuries to decompose. Beyond environmental impact, traditional products often 
-                cause discomfort, skin irritation, and limited mobility. Many people face 
-                accessibility challenges and high ongoing costs.
+                cause discomfort, skin irritation, and limited mobility. 
               </p>
             </motion.div>
 
@@ -73,10 +74,11 @@ const About = () => {
               viewport={{ once: true }}
               className="bg-secondary-400/80 backdrop-blur-sm rounded-3xl p-8 border border-secondary-300"
             >
-              <div className="flex items-center mb-6">
-                <div className="p-3 rounded-full bg-primary-500/20 mr-4">
-                  <Lightbulb className="w-8 h-8 text-primary-600" />
+               <div className="flex items-center mb-6">
+                <div className="p-3 rounded-lg bg-primary-500/20 mr-4">
+                  <Lightbulb className="w-8 h-8 text-primary-400" />
                 </div>
+                <h4 className="text-2xl font-bold text-purple">Our Solution</h4>
               </div>
               <p className="text-primary-700 leading-relaxed">
                 AMIE combines cutting-edge science with sustainable design, delivering superior 
