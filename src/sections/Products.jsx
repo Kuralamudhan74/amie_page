@@ -39,21 +39,21 @@ const Products = () => {
 
   const testimonials = [
     {
-      name: 'Sarah M.',
-      role: 'Mother of 2',
-      content: 'Finally, a diaper that doesn\'t leak and actually cares for my baby\'s skin!',
+      name: 'Aruna',
+      role: 'Working Professional',
+      content: 'Over the last three years, this period underwear has become an indispensable part of my routine. It is a source of confidence for me, drastically simplifying those days. The product delivers excellent coverage, and the fact that it has not stained once, which proves its quality. It is a wonderful, sustainable solution that I can confidently reuse. Happy that I found this!',
       rating: 5
     },
     {
-      name: 'Jennifer L.',
-      role: 'Active Professional',
-      content: 'AMIE gives me confidence to live my life without worry. Game changer!',
+      name: 'Hitha 13Yrs',
+      role: 'Tennis Player',
+      content: 'I started using AMIE period panties from the very first time I got my period—I’ve never used pads! I play tennis almost every day, and these are just perfect for me. They feel exactly like my regular sports shorts—soft, stretchable, and super comfortable. I can move freely, play long matches, and never worry about leaks or discomfort. Choosing reusable period panties has been the best and most comfortable decision ever!',
       rating: 5
     },
     {
-      name: 'Maria R.',
-      role: 'Teen Advocate',
-      content: 'Stylish, comfortable, and sustainable. Everything I wanted in period care.',
+      name: 'Lekha 32Yrs',
+      role: 'Fitness Coach & Weightlifter',
+      content: 'I used to experience small leaks every time I lifted heavy at the gym, and it was honestly embarrassing. I tried using sanitary pads, but they felt bulky, shifted during workouts, and made me self-conscious. Then I discovered AMIE reusable period panties—and I’ve never looked back. They feel just like my regular gym wear, stay perfectly in place, and keep me completely dry and comfortable no matter how intense my workout gets. Now I lift with total confidence, without worrying about leaks or discomfort!',
       rating: 5
     }
   ];

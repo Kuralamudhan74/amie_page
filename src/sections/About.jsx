@@ -54,8 +54,8 @@ const About = () => {
               className="bg-secondary-400/80 backdrop-blur-sm rounded-3xl p-8 border border-secondary-300"
             >
               <div className="flex items-center mb-6">
-                <div className="p-3 rounded-lg bg-yellow-500/20 mr-4">
-                  <XCircle className="w-8 h-8 text-yellow-400" />
+                <div className="p-3 rounded-lg bg-primary-500/20 mr-4">
+                  <XCircle className="w-8 h-8 text-primary-400" />
                 </div>
                 <h4 className="text-2xl font-bold text-purple">The Problem</h4>
               </div>
