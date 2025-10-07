@@ -10,10 +10,18 @@
     min-height: 100vh;
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
+    scroll-padding-top: 4rem; /* 64px for mobile header */
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Adjust scroll padding for larger screens with taller header */
+  @media (min-width: 1024px) {
+    body {
+      scroll-padding-top: 5rem; /* 80px for lg header */
+    }
   }
 
   /* Custom scrollbar */

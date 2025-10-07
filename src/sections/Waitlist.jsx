@@ -132,16 +132,22 @@ const Waitlist = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <input
-                  type="text"
+                <select
                   name="age"
                   value={formData.age}
                   onChange={handleInputChange}
-                  className="w-full px-6 pt-6 pb-2 rounded-lg bg-white text-primary-900 border-2 border-gray-200 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 peer"
+                  className="w-full px-6 pt-6 pb-2 rounded-lg bg-white text-primary-900 border-2 border-gray-200 focus:ring-2 focus:ring-primary-300 focus:outline-none transition-all duration-300 appearance-none cursor-pointer peer"
                   required
-                />
+                >
+                  <option value="" disabled> </option>
+                  <option value="10-20">10-20</option>
+                  <option value="21-30">21-30</option>
+                  <option value="31-40">31-40</option>
+                  <option value="41-50">41-50</option>
+                  <option value="above_50">Above 50</option>
+                </select>
                 <label className="absolute left-6 top-2 text-primary-500 text-sm transition-all duration-300 peer-focus:text-primary-300 peer-focus:text-xs peer-focus:-translate-y-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-500 peer-placeholder-shown:translate-y-0">
-                  Age
+                  Select Age Range
                 </label>
               </motion.div>
 

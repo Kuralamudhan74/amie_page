@@ -21,8 +21,9 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center"
             >
-             <div className="flex flex-col items-center justify-center text-center">
+             <div className="flex flex-col items-center justify-center">
                 <h3 className="text-2xl font-bold text-gradient mb-2">
                   <img 
                     src={amieLogo} 
@@ -31,7 +32,7 @@ const Footer = () => {
                   />
                 </h3>
                 <p className="text-secondary-400 text-sm">
-                  Your day Secured
+                  Your day, Secured
                 </p>
               </div>
 
@@ -43,13 +44,13 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-center md:text-left"
+              className="text-center"
             >
-                        <h4 className="text-secondary-500 font-semibold mb-4">
+              <h4 className="text-secondary-500 font-semibold mb-4">
                 Follow Our Journey
               </h4>
 
-              <div className="flex space-x-4 pl-10">
+              <div className="flex justify-center space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
@@ -76,7 +77,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center md:text-right"
+              className="text-center"
             >
               <h4 className="text-secondary-500 font-semibold mb-4">Contact</h4>
               <div className="space-y-2">
