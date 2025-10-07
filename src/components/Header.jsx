@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { cn } from '../utils';
 import amieLogo from '../assets/Amie Logo - Colour.png';
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const NAVIGATION_ITEMS = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
@@ -11,6 +14,14 @@ const Header = () => {
     { name: 'Products', href: '#product-overview' },
     { name: 'Waitlist', href: '#waitlist' },
   ];
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <motion.header 
@@ -63,12 +74,46 @@ const Header = () => {
           <motion.button
             className="md:hidden p-2 text-primary-700 hover:text-primary-500"
             whileTap={{ scale: 0.95 }}
+            onClick={toggleMobileMenu}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
             </svg>
           </motion.button>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="md:hidden bg-secondary-500/95 backdrop-blur-sm border-t border-secondary-400"
+          >
+            <nav className="container py-4">
+              <div className="flex flex-col space-y-4">
+                {NAVIGATION_ITEMS.map((item, index) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMobileMenu}
+                    className="text-primary-700 hover:text-primary-500 transition-colors duration-300 font-medium py-2"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.3 }}
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+              </div>
+            </nav>
+          </motion.div>
+        )}
       </div>
     </motion.header>
   );
