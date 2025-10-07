@@ -229,7 +229,7 @@ const Products = () => {
             >
               <div className="bg-white/80 rounded-2xl p-6 border border-secondary-300">
                 <TrendingUp className="w-12 h-12 text-primary-700 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-primary-900 mb-2">Sustainable Future</h3>
+                <h3 className="text-xl font-bold text-primary-900 mb-2">Sustainable Solution</h3>
                 {/* <p className="text-primary-700">Biodegradable materials that break down naturally without harming the environment</p> */}
               </div>
             </motion.div>

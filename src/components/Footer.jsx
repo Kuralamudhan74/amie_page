@@ -85,7 +85,7 @@ const Footer = () => {
                   premalatha@novcor.in
                 </p>
                 <p className="text-secondary-500 text-sm">
-                  +91 8667494710
+                +91 8072590967
                 </p>
               </div>
             </motion.div>

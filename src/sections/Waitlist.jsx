@@ -96,10 +96,10 @@ const Waitlist = () => {
                   <option value="women incontinence ">Women Incontinence </option>
                   <option value="period wear">Period Wear</option>
                   <option value="adult_diapers">Adult Diapers</option>
-                  <option value="other">Other</option>
+                  <option value="All the above">Other</option>
                 </select>
                 <label className="absolute left-6 top-2 text-primary-500 text-sm transition-all duration-300 peer-focus:text-primary-300 peer-focus:text-xs peer-focus:-translate-y-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-500 peer-placeholder-shown:translate-y-0">
-                  Select Category
+                  Interested Product
                 </label>
               </motion.div>
 
@@ -169,7 +169,7 @@ const Waitlist = () => {
                   <option value="" disabled> </option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
-                  <option value="not_to_say">Not to say</option>
+                  <option value="not_to_say">Other</option>
                 </select>
                 <label className="absolute left-6 top-2 text-primary-500 text-sm transition-all duration-300 peer-focus:text-primary-300 peer-focus:text-xs peer-focus:-translate-y-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-primary-500 peer-placeholder-shown:translate-y-0">
                   Select Gender
