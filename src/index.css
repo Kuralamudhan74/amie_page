@@ -5,15 +5,23 @@
 
 @layer base {
   body {
-    @apply bg-secondary-900 text-white font-sans;
+    @apply bg-secondary-500 text-primary-900 font-sans;
     margin: 0;
     min-height: 100vh;
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
+    scroll-padding-top: 5rem; /* 80px for mobile header + extra clearance */
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Adjust scroll padding for larger screens with taller header */
+  @media (min-width: 1024px) {
+    body {
+      scroll-padding-top: 6rem; /* 96px for lg header + extra clearance */
+    }
   }
 
   /* Custom scrollbar */
@@ -22,16 +30,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: #1e293b;
+    background: #faf8f8;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #14b8a6;
+    background: #351736;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #0d9488;
+    background: #2d132e;
   }
 }
 
@@ -45,7 +53,7 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-500 to-accent-purple bg-clip-text text-transparent;
   }
   
   .card-hover {
@@ -53,16 +61,16 @@
   }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:from-primary-600 hover:to-primary-700 hover:scale-105 hover:shadow-lg;
+    @apply bg-gradient-to-r from-primary-500 to-accent-purple text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:from-accent-purple hover:to-primary-600 hover:scale-105 hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply bg-secondary-800 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-secondary-700 hover:scale-105;
+    @apply bg-primary-800 text-secondary-500 px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-primary-700 hover:scale-105;
   }
 
   /* Glassmorphism effect */
   .glass {
-    @apply bg-white/10 backdrop-blur-md border border-white/20;
+    @apply bg-primary-900/10 backdrop-blur-md border border-primary-900/20;
   }
 
   /* Floating animation */
@@ -77,7 +85,7 @@
 
   /* Gradient text animation */
   .gradient-text {
-    background: linear-gradient(45deg, #14b8a6, #06b6d4, #8b5cf6);
+    background: linear-gradient(45deg, #351736, #2d132e, #150716);
     background-size: 200% 200%;
     animation: gradient 3s ease infinite;
     -webkit-background-clip: text;

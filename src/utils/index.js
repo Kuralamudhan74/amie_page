@@ -57,7 +57,7 @@ export const PRODUCTS = [
     icon: 'Baby',
     title: 'Baby diapers',
     description: 'Gentle, reusable protection for your little one\'s delicate skin',
-    color: 'text-yellow-400'
+    color: 'text-primary-600'
   },
   {
     icon: 'Shirt',

@@ -1,15 +1,16 @@
 import { motion } from 'framer-motion';
-import { Camera, Twitter, Linkedin } from 'lucide-react';
+import { Instagram, Twitter, Linkedin } from 'lucide-react';
+import amieLogo from '../assets/Amie Logo - Off White Colour.png';
+// import  Instagram  from '../assets/instagram.png';
+
 
 const Footer = () => {
   const socialLinks = [
-    { name: 'Instagram', icon: Camera, href: '#' },
-    { name: 'Twitter', icon: Twitter, href: '#' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/amie_yourdaysecured?igsh=MW02dTdjbGVvYTNtcw==' }
   ];
 
   return (
-    <footer className="bg-secondary-900 border-t border-secondary-800">
+    <footer className="bg-primary-500 border-t border-primary-400">
       <div className="container">
         {/* Main Footer Content */}
         <div className="py-12">
@@ -20,15 +21,21 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-center"
             >
-              <div className="flex flex-col">
+             <div className="flex flex-col items-center justify-center">
                 <h3 className="text-2xl font-bold text-gradient mb-2">
-                  AMIE
+                  <img 
+                    src={amieLogo} 
+                    alt="AMIE Logo" 
+                    className="h-14 lg:h-30 object-contain" 
+                  />
                 </h3>
                 <p className="text-secondary-400 text-sm">
-                  Your day Secured
+                  Your day, Secured
                 </p>
               </div>
+
             </motion.div>
 
             {/* Social Media */}
@@ -37,15 +44,20 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-center md:text-left"
+              className="text-center"
             >
-              <h4 className="text-white font-semibold mb-4">Follow Our Journey</h4>
-              <div className="flex justify-center md:justify-start space-x-4">
+              <h4 className="text-secondary-500 font-semibold mb-4">
+                Follow Our Journey
+              </h4>
+
+              <div className="flex justify-center space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
                     href={social.href}
-                    className="w-10 h-10 rounded-full bg-secondary-800 flex items-center justify-center text-secondary-300 hover:text-primary-400 hover:bg-secondary-700 transition-all duration-300"
+                    target="_blank"
+                    rel="noopener noreferer"
+                    className="w-10 h-10 rounded-full bg-primary-800 flex items-center justify-center text-secondary-400 hover:text-secondary-500 hover:bg-primary-700 transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, scale: 0 }}
@@ -65,15 +77,15 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center md:text-right"
+              className="text-center"
             >
-              <h4 className="text-white font-semibold mb-4">Contact</h4>
+              <h4 className="text-secondary-500 font-semibold mb-4">Contact</h4>
               <div className="space-y-2">
-                <p className="text-secondary-300 text-sm">
-                  hello@amie.com
-                </p>
                 <p className="text-secondary-400 text-sm">
-                  Coming Soon
+                  premalatha@novcor.in
+                </p>
+                <p className="text-secondary-500 text-sm">
+                +91 8072590967
                 </p>
               </div>
             </motion.div>
@@ -86,9 +98,9 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="py-6 border-t border-secondary-800 text-center"
+          className="py-6 border-t border-primary-400 text-center"
         >
-          <p className="text-secondary-400 text-sm">
+          <p className="text-secondary-500 text-sm">
             © 2025 AMIE | Your day, secured.
           </p>
         </motion.div>

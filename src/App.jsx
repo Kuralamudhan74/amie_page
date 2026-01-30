@@ -1,30 +1,55 @@
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Header from './components/Header';
-import Hero from './sections/Hero';
-import About from './sections/About';
-import Benefits from './sections/Benefits';
-import Products from './sections/Products';
-import Waitlist from './sections/Waitlist';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import SmoothScroll from './components/SmoothScroll';
+
+// Pages
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import WhyAmiePage from './pages/WhyAmiePage';
+import ProductsPage from './pages/ProductsPage';
+
 import './App.css';
 
-function App() {
+// Scroll to top on route change
+function ScrollToTopOnRouteChange() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function AppContent() {
   return (
     <SmoothScroll>
       <div className="App">
+        <ScrollToTopOnRouteChange />
         <Header />
         <main>
-          <Hero />
-          <About />
-          <Benefits />
-          <Products />
-          <Waitlist />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/why-amie" element={<WhyAmiePage />} />
+            <Route path="/products" element={<ProductsPage />} />
+          </Routes>
         </main>
         <Footer />
         <ScrollToTop />
       </div>
     </SmoothScroll>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 

@@ -7,36 +7,57 @@ export default {
   theme: {
     extend: {
       colors: {
-        // AMIE Brand Colors
+        // AMIE Brand Colors - Dark Purple Primary
         primary: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6', // Main teal
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
+          50: '#f3f0f4',
+          100: '#e6dde9',
+          200: '#d1c0d6',
+          300: '#b89bbf',
+          400: '#9d73a6',
+          500: '#351736', // Main dark purple
+          600: '#2d132e',
+          700: '#250f26',
+          800: '#1d0b1e',
+          900: '#150716',
         },
+        // Base Colors - Pure Off White Background
         secondary: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
+          50: '#FFFCFC', // Pure off white - main background
+          100: '#faf8f8',
+          200: '#f5f2f2',
+          300: '#f0ecec',
+          400: '#ebe6e6',
+          500: '#FFFCFC', // Main pure off white
+          600: '#e6e0e0',
+          700: '#d9d1d1',
+          800: '#ccc2c2',
+          900: '#bfb3b3',
         },
+        // Highlight Colors
+        highlight: {
+          pink: '#F078CF', // Persian Pink - buttons, CTAs, icons
+          orange: '#E9562F', // Flamingo Orange - section titles, promotions
+          yellow: '#FFB116', // Tangerine Yellow - hover effects, accents
+        },
+        // Accent Colors
         accent: {
-          purple: '#2C1B47',
-          dark: '#1A1A1A',
-          gray: '#2C2C2C',
-          light: '#E0E0E0',
+          red: '#D03714', // Vermilion Red - alerts, special offers, key features
+          purple: '#35173B', // Enhanced dark purple for better contrast
+          dark: '#150716',
+          gray: '#d9d1d1', // Subtle gray that works with off-white
+          light: '#faf8f8', // Light accent that complements off-white
+        },
+        // Purple color palette for About section
+        purple: {
+          'light-bg': '#FFFCFC', // Pure off white background
+          'dark-text': '#150716', // Dark purple for titles
+          'medium-text': '#35173B', // Enhanced medium purple for paragraphs
+          'card-bg': '#ffffff', // White for cards
+        },
+        // About section gradient colors
+        about: {
+          'gradient-start': '#FFFCFC', // Pure off white
+          'gradient-end': '#faf8f8', // Subtle variation of off white
         }
       },
       fontFamily: {
@@ -65,6 +86,7 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-about': 'linear-gradient(180deg, #ffffff 0%, #f2fbfa 100%)',
       },
     },
   },
