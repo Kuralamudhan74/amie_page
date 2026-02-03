@@ -42,7 +42,7 @@ const MissionSection = () => {
               <h3 className="text-2xl font-bold text-primary-900">Our Vision</h3>
             </div>
             <p className="text-primary-700 text-lg leading-relaxed">
-              A world where leak protection is no longer a compromise—where superior
+              A world where leak protection is no longer a compromise-where superior
               performance meets sustainability, and where everyone can access
               comfortable, eco-friendly solutions that respect both people and the planet.
             </p>

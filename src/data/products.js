@@ -243,7 +243,7 @@ export const TESTIMONIALS = [
   {
     name: 'Hitha 13Yrs',
     role: 'Tennis Player',
-    content: 'I started using AMIE period panties from the very first time I got my period—I\'ve never used pads! I play tennis almost every day, and these are just perfect for me. They feel exactly like my regular sports shorts—soft, stretchable, and super comfortable. I can move freely, play long matches, and never worry about leaks or discomfort. Choosing reusable period panties has been the best and most comfortable decision ever!',
+    content: 'I started using AMIE period panties from the very first time I got my period—I\'ve never used pads! I play tennis almost every day, and these are just perfect for me. They feel exactly like my regular sports shorts-soft, stretchable, and super comfortable. I can move freely, play long matches, and never worry about leaks or discomfort. Choosing reusable period panties has been the best and most comfortable decision ever!',
     rating: 5
   },
   {

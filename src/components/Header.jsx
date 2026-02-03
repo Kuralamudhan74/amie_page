@@ -13,7 +13,7 @@ const Header = () => {
     { name: 'About', href: '/about' },
     { name: 'Why AMIE', href: '/why-amie' },
     { name: 'Products', href: '/products' },
-    { name: 'Waitlist', href: '/#waitlist' },
+    { name: 'Waitlist', href: '/waitlist' },
   ];
 
   const toggleMobileMenu = () => {
@@ -26,23 +26,11 @@ const Header = () => {
 
   const isActive = (href) => {
     if (href === '/') return location.pathname === '/';
-    if (href.startsWith('/#')) return location.pathname === '/' && location.hash === href.slice(1);
     return location.pathname.startsWith(href);
   };
 
   const handleNavClick = (e, href) => {
     closeMobileMenu();
-
-    // Handle hash links on home page
-    if (href.startsWith('/#')) {
-      if (location.pathname === '/') {
-        e.preventDefault();
-        const element = document.querySelector(href.slice(1));
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    }
   };
 
   return (
@@ -85,32 +73,18 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
               >
-                {item.href.startsWith('/#') ? (
-                  <Link
-                    to={item.href}
-                    onClick={(e) => handleNavClick(e, item.href)}
-                    className={cn(
-                      "text-primary-700 hover:text-primary-500 transition-colors duration-300 font-medium",
-                      isActive(item.href) && "text-primary-500 font-semibold"
-                    )}
-                  >
-                    <motion.span whileHover={{ y: -2 }}>
-                      {item.name}
-                    </motion.span>
-                  </Link>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={cn(
-                      "text-primary-700 hover:text-primary-500 transition-colors duration-300 font-medium",
-                      isActive(item.href) && "text-primary-500 font-semibold"
-                    )}
-                  >
-                    <motion.span whileHover={{ y: -2 }}>
-                      {item.name}
-                    </motion.span>
-                  </Link>
-                )}
+                <Link
+                  to={item.href}
+                  onClick={() => closeMobileMenu()}
+                  className={cn(
+                    "text-primary-700 hover:text-primary-500 transition-colors duration-300 font-medium",
+                    isActive(item.href) && "text-primary-500 font-semibold"
+                  )}
+                >
+                  <motion.span whileHover={{ y: -2 }}>
+                    {item.name}
+                  </motion.span>
+                </Link>
               </motion.div>
             ))}
           </nav>
@@ -149,29 +123,16 @@ const Header = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.3 }}
                   >
-                    {item.href.startsWith('/#') ? (
-                      <Link
-                        to={item.href}
-                        onClick={(e) => handleNavClick(e, item.href)}
-                        className={cn(
-                          "text-primary-700 hover:text-primary-500 transition-colors duration-300 font-medium py-2 block",
-                          isActive(item.href) && "text-primary-500 font-semibold"
-                        )}
-                      >
-                        {item.name}
-                      </Link>
-                    ) : (
-                      <Link
-                        to={item.href}
-                        onClick={closeMobileMenu}
-                        className={cn(
-                          "text-primary-700 hover:text-primary-500 transition-colors duration-300 font-medium py-2 block",
-                          isActive(item.href) && "text-primary-500 font-semibold"
-                        )}
-                      >
-                        {item.name}
-                      </Link>
-                    )}
+                    <Link
+                      to={item.href}
+                      onClick={closeMobileMenu}
+                      className={cn(
+                        "text-primary-700 hover:text-primary-500 transition-colors duration-300 font-medium py-2 block",
+                        isActive(item.href) && "text-primary-500 font-semibold"
+                      )}
+                    >
+                      {item.name}
+                    </Link>
                   </motion.div>
                 ))}
               </div>

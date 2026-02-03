@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Baby, Shirt, Heart, Users, Leaf, Zap, Award, TrendingUp, Clock, Shield } from 'lucide-react';
-import {Calendar} from 'lucide-react';
+import { Calendar } from 'lucide-react';
 import adult_diaper from '../assets/diaper.png';
 import period_panties from '../assets/knickers.png';
 import baby_image from '../assets/baby.png';
@@ -47,7 +47,7 @@ const Products = () => {
     {
       name: 'Hitha 13Yrs',
       role: 'Tennis Player',
-      content: 'I started using AMIE period panties from the very first time I got my period—I’ve never used pads! I play tennis almost every day, and these are just perfect for me. They feel exactly like my regular sports shorts—soft, stretchable, and super comfortable. I can move freely, play long matches, and never worry about leaks or discomfort. Choosing reusable period panties has been the best and most comfortable decision ever!',
+      content: 'I started using AMIE period panties from the very first time I got my period-I’ve never used pads! I play tennis almost every day, and these are just perfect for me. They feel exactly like my regular sports shorts-soft, stretchable, and super comfortable. I can move freely, play long matches, and never worry about leaks or discomfort. Choosing reusable period panties has been the best and most comfortable decision ever!',
       rating: 5
     },
     {
@@ -61,7 +61,7 @@ const Products = () => {
   return (
     <section id="products" className="section-padding bg-gradient-to-br from-secondary-500 via-secondary-400 to-accent-purple">
       {/* Top Benefits Cards */}
-   
+
       {/*Interactive Statistics Section*/}
       <div className="container mb-16">
         <motion.div
@@ -279,7 +279,7 @@ const Products = () => {
             viewport={{ once: true }}
             className="text-lg text-secondary-400 text-center mb-12 max-w-3xl mx-auto"
           >
-            We're working on something transformative. Get ready for the next generation of 
+            We're working on something transformative. Get ready for the next generation of
             leakproof, sustainable comfort.
           </motion.p>
 
@@ -298,9 +298,9 @@ const Products = () => {
                   className={`inline-flex p-4 rounded-2xl bg-primary-700/50 backdrop-blur-sm mb-6 ${product.color}`}
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   animate={{ y: -5 }}
-                  transition={{ 
-                    type: 'easeInOut', 
-                    duration: 1 + index * 0.15, 
+                  transition={{
+                    type: 'easeInOut',
+                    duration: 1 + index * 0.15,
                     repeat: Infinity,
                     repeatType: 'reverse'
                   }}
@@ -311,11 +311,11 @@ const Products = () => {
                     <product.icon className="w-8 h-8" />
                   )}
                 </motion.div>
-                
+
                 <h3 className="text-xl font-bold text-secondary-500 mb-4">
                   {product.title}
                 </h3>
-                
+
                 <p className="text-secondary-400 leading-relaxed">
                   {product.description}
                 </p>

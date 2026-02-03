@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import WhyAmiePage from './pages/WhyAmiePage';
 import ProductsPage from './pages/ProductsPage';
+import WaitlistPage from './pages/WaitlistPage';
 
 import './App.css';
 
@@ -36,6 +37,7 @@ function AppContent() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/why-amie" element={<WhyAmiePage />} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/waitlist" element={<WaitlistPage />} />
           </Routes>
         </main>
         <Footer />

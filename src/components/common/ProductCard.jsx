@@ -17,10 +17,10 @@ const ProductCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-secondary-300 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group"
+      className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-secondary-300 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group flex flex-col h-full"
     >
       {/* Image Container */}
-      <div className="relative aspect-square bg-secondary-100 overflow-hidden">
+      <div className="relative aspect-square bg-secondary-100 overflow-hidden flex-shrink-0">
         <img
           src={image}
           alt={name}
@@ -29,11 +29,6 @@ const ProductCard = ({
 
         {/* Badges */}
         <div className="absolute top-4 left-4 flex flex-col gap-2">
-          {isNew && (
-            <span className="px-3 py-1 rounded-full bg-highlight-pink text-white text-xs font-semibold">
-              New
-            </span>
-          )}
           {isComingSoon && (
             <span className="px-3 py-1 rounded-full bg-primary-500 text-secondary-500 text-xs font-semibold">
               Coming Soon
@@ -43,19 +38,19 @@ const ProductCard = ({
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         {/* Category */}
         <span className="text-sm text-primary-600 font-medium capitalize">
           {category === 'incontinence' ? 'Adult Incontinence' : category === 'period' ? 'Period Underwear' : 'Baby Diapers'}
         </span>
 
         {/* Name */}
-        <h3 className="text-xl font-bold text-primary-900 mt-1 mb-2">
+        <h3 className="text-xl font-bold text-primary-900 mt-1 mb-2 line-clamp-2">
           {name}
         </h3>
 
         {/* Description */}
-        <p className="text-primary-700 text-sm leading-relaxed mb-4 line-clamp-2">
+        <p className="text-primary-700 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">
           {description}
         </p>
 
@@ -88,7 +83,7 @@ const ProductCard = ({
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={() => onViewDetails?.(product)}
-          className="w-full py-3 rounded-lg bg-gradient-to-r from-primary-500 to-accent-purple text-white font-semibold transition-all duration-300 hover:from-accent-purple hover:to-primary-600"
+          className="w-full py-3 rounded-lg bg-gradient-to-r from-primary-500 to-accent-purple text-white font-semibold transition-all duration-300 hover:from-accent-purple hover:to-primary-600 mt-auto"
         >
           {isComingSoon ? 'Notify Me' : 'View Details'}
         </motion.button>

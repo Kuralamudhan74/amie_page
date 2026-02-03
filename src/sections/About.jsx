@@ -20,7 +20,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto space-y-6 text-lg text-primary-700 leading-relaxed">
             <p>
               At AMIE, we believe life's little <q><b><i>leaks</i></b></q> shouldn't get in the way of living fully. 
-              From infancy to adulthood, <q><b><i>leaks</i></b></q> are a universal part of the human journey—yet managing 
+              From infancy to adulthood, <q><b><i>leaks</i></b></q> are a universal part of the human journey-yet managing 
               them doesn't need to come at the cost of comfort, confidence, or the planet.
             </p>
             <p>

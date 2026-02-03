@@ -29,7 +29,7 @@ const StorySection = () => {
             <div className="prose prose-lg max-w-none">
               <p className="text-primary-700 text-lg leading-relaxed mb-6">
                 At AMIE, we believe life's little <em>"leaks"</em> shouldn't get in the way of living fully.
-                From infancy to adulthood, leaks are a universal part of the human journey—yet managing
+                From infancy to adulthood, leaks are a universal part of the human journey-yet managing
                 them doesn't need to come at the cost of comfort, confidence, or the planet.
               </p>
 

@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import PageHero from '../components/common/PageHero';
 import CategoryFilter from '../components/common/CategoryFilter';
 import ProductCard from '../components/common/ProductCard';
@@ -77,37 +77,47 @@ const ProductsPage = () => {
           </motion.div>
 
           {/* Products Grid */}
-          {filteredProducts.length > 0 ? (
-            <motion.div
-              layout
-              className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-            >
-              {filteredProducts.map((product, index) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  index={index}
-                  onViewDetails={handleViewDetails}
-                />
-              ))}
-            </motion.div>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center py-16"
-            >
-              <p className="text-xl text-primary-600 mb-4">
-                No products found in this category.
-              </p>
-              <button
-                onClick={() => handleCategoryChange('all')}
-                className="text-primary-500 font-semibold hover:underline"
+          <AnimatePresence mode="wait">
+            {filteredProducts.length > 0 ? (
+              <motion.div
+                key={activeCategory}
+                layout
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.3 }}
+                className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-fr"
               >
-                View all products
-              </button>
-            </motion.div>
-          )}
+                {filteredProducts.map((product, index) => (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                    index={index}
+                    onViewDetails={handleViewDetails}
+                  />
+                ))}
+              </motion.div>
+            ) : (
+              <motion.div
+                key="empty"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+                className="text-center py-16"
+              >
+                <p className="text-xl text-primary-600 mb-4">
+                  No products found in this category.
+                </p>
+                <button
+                  onClick={() => handleCategoryChange('all')}
+                  className="text-primary-500 font-semibold hover:underline"
+                >
+                  View all products
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* Bottom Info */}
           <motion.div
@@ -124,7 +134,7 @@ const ProductsPage = () => {
               <p className="text-primary-700 mb-4">
                 More products are coming soon! Join our waitlist to be notified when new products launch.
               </p>
-              <a href="/#waitlist">
+              <a href="/waitlist">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
